@@ -1,0 +1,39 @@
+post http://localhost:3000/register 
+content-Type:application/json 
+
+{   
+    "name":"TONYPLAYER_2",
+    "username":"tony1234",
+    "password": "tony@456789",
+    "gender": "Female",
+    "location":"hyderabad"
+}
+###############
+
+post http://localhost:3000/login/ 
+content-Type:application/json 
+
+{"username":"tony1234",
+"password": "tony@456789"
+}
+##########getting books######
+get http://localhost:3000/states/
+Authorization :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnkxMjM0IiwiaWF0IjoxNjk1MTE4NjA0fQ.uuRLNaXrwI4yMgg_OJZwYhm-BCpZfVLmAsBsacc23uM
+####################
+get http://localhost:3000/states/8/
+Authorization :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnkxMjM0IiwiaWF0IjoxNjk1MTE4NjA0fQ.uuRLNaXrwI4yMgg_OJZwYhm-BCpZfVLmAsBsacc23uM
+#########################
+post http://localhost:3000/districts/
+Content-Type:application/json
+Authorization :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnkxMjM0IiwiaWF0IjoxNjk1MTE4NjA0fQ.uuRLNaXrwI4yMgg_OJZwYhm-BCpZfVLmAsBsacc23uM
+
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
